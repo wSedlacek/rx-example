@@ -12,6 +12,8 @@ specifiers:
   '@angular/platform-browser': ~12.0.2
   '@angular/platform-browser-dynamic': ~12.0.2
   '@angular/router': ~12.0.2
+  '@rx-angular/cdk': ^1.0.0-alpha.8
+  '@rx-angular/template': ^1.0.0-beta.25
   '@types/jasmine': ~3.6.0
   '@types/node': ^12.11.1
   jasmine-core: ~3.7.0
@@ -34,6 +36,8 @@ dependencies:
   '@angular/platform-browser': 12.0.2_faf82e75ca81f2299423417e470e05fa
   '@angular/platform-browser-dynamic': 12.0.2_993d4b7e7309e8e890db12e9e610ae8a
   '@angular/router': 12.0.2_7302e082f0ff79e6d8b56b0c3ec4fbf1
+  '@rx-angular/cdk': 1.0.0-alpha.8_@angular+core@12.0.2
+  '@rx-angular/template': 1.0.0-beta.25_4aea78d0e8a39a522d5bfd7c334ef607
   rxjs: 6.6.7
   tslib: 2.2.0
   zone.js: 0.11.4
@@ -351,6 +355,22 @@ packages:
       '@angular/compiler': 12.0.2
       '@angular/core': 12.0.2_rxjs@6.6.7+zone.js@0.11.4
       '@angular/platform-browser': 12.0.2_faf82e75ca81f2299423417e470e05fa
+      tslib: 2.2.0
+    dev: false
+
+  /@angular/platform-browser/11.2.14_faf82e75ca81f2299423417e470e05fa:
+    resolution: {integrity: sha512-fb7b7ss/gRoP8wLAN17W62leMgjynuyjEPU2eUoAAazsG9f2cgM+z3rK29GYncDVyYQxZUZYnjSqvL6GSXx86A==}
+    peerDependencies:
+      '@angular/animations': 11.2.14
+      '@angular/common': 11.2.14
+      '@angular/core': 11.2.14
+    peerDependenciesMeta:
+      '@angular/animations':
+        optional: true
+    dependencies:
+      '@angular/animations': 12.0.2_@angular+core@12.0.2
+      '@angular/common': 12.0.2_@angular+core@12.0.2+rxjs@6.6.7
+      '@angular/core': 12.0.2_rxjs@6.6.7+zone.js@0.11.4
       tslib: 2.2.0
     dev: false
 
@@ -1536,6 +1556,35 @@ packages:
       node-gyp: 7.1.2
       read-package-json-fast: 2.0.2
     dev: true
+
+  /@rx-angular/cdk/1.0.0-alpha.8_@angular+core@12.0.2:
+    resolution: {integrity: sha512-pSCphPlfIJI2cj68oBiQS7GOZVSJAdlzRUusnXz+GpVwjH2TCQrHKTwr2m5wBiDbttiLoFfQETo/Cj3AR6OFWg==}
+    engines: {node: '>=10.12.0', npm: '>=5.3.0', yarn: '>=1.9.2'}
+    peerDependencies:
+      '@angular/core': '>10.1.1'
+    dependencies:
+      '@angular/core': 12.0.2_rxjs@6.6.7+zone.js@0.11.4
+      rxjs: 6.6.7
+      tslib: 2.2.0
+    dev: false
+
+  /@rx-angular/template/1.0.0-beta.25_4aea78d0e8a39a522d5bfd7c334ef607:
+    resolution: {integrity: sha512-nzUgSDbPM2fbFlwCx5lQVNqvgrL9W0kWjycLwzGYAh81+gvm2UJG7lersuLuc6sXkt3DF9cc0lXd0DtLjFBAgg==}
+    engines: {node: '>=10.12.0', npm: '>=5.3.0', yarn: '>=1.9.2'}
+    peerDependencies:
+      '@angular/core': '>10.1.1'
+      '@rx-angular/cdk': '>=1.0.0-alpha.8'
+      rxjs: ^6.5.5
+    dependencies:
+      '@angular/core': 12.0.2_rxjs@6.6.7+zone.js@0.11.4
+      '@angular/platform-browser': 11.2.14_faf82e75ca81f2299423417e470e05fa
+      '@rx-angular/cdk': 1.0.0-alpha.8_@angular+core@12.0.2
+      rxjs: 6.6.7
+      tslib: 2.2.0
+    transitivePeerDependencies:
+      - '@angular/animations'
+      - '@angular/common'
+    dev: false
 
   /@schematics/angular/12.0.2:
     resolution: {integrity: sha512-DMUfp7226QY2FkJeBm1xAUUKRX9umVCRhqEcku4Zaig6PylVd9LZFLjZvGKA4Vq2DkYRtClll3z5FIhAOSY3SQ==}
